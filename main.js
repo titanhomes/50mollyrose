@@ -1,9 +1,9 @@
 $(document).ready(function() {
   window.setTimeout(function() {
     $('.for-rent').removeClass('puff-in-center');
-  }, 700);
+  }, 1000);
   window.setTimeout(function() {
     $('.for-rent').addClass('slide-up');
-    $('.landing').addClass('bg-img');
-  }, 1000);
+    $('.starting').addClass('opacity');
+  }, 1300);
 });

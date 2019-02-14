@@ -1,24 +1,42 @@
+.vh-100 {
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+#features:target {
+  z-index: 10;
+  background: green;
+}
 .landing {
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/DSCN9944.JPG');
+  width: 100%;
+  background-image: linear-gradient(hsla(216, 3%, 99%, 1), hsla(216, 3%, 99%, 1)), url('img/DSCN9944.JPG');
   background-size: cover;
   background-position: center;
-}
-.landing.starting {
-  background-image: linear-gradient(hsla(216, 3%, 99%, 1), hsla(216, 3%, 99%, 1)), url('img/DSCN9944.JPG');
-  background-color: hsla(216, 3%, 99%, 1);
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  position: absolute;
   transition: all 2s ease;
+  z-index: 1;
+  /* background-color: hsla(216, 3%, 99%, 1); */
+}
+.landing:before {
+  content: '';
+  background-image: url('img/DSCN9944.JPG');
+  height: 100vh;
+  width: 100vw;
   background-position: center;
   background-size: cover;
+  opacity: 0;
+  transition: opacity 2s ease;
+  position: absolute;
 }
-.landing.bg-img {
-  background-image: linear-gradient(hsla(216, 3%, 99%, 0), hsla(216, 3%, 99%, 0)), url('img/DSCN9944.JPG');
+.opacity.landing:before {
+  opacity: 1;
+}
 
-}
 .for-rent {
   background: #d3281b;
   font-family: 'Work Sans', sans-serif;
@@ -51,6 +69,30 @@
   font-size: 24px;
 
 }
+.actions {
+  position: relative;
+}
+.address {
+  font-family: 'Work Sans', sans-serif;
+  display: block;
+  font-size: 46px;
+  text-transform: uppercase;
+  text-shadow: 0 0 7px #101010;
+  opacity: 0.9;
+  color: #ffffff;
+}
+.city {
+  display: block;
+  color: #ffffff;
+  text-align: center;
+}
+.main-action-anchor {
+  font-size: 24px;
+  font-weight: bold;
+  color: hsl(211, 35%, 89%);
+  background-image: linear-gradient(to right, #007bff, #2d84e0)
+}
+
 #map {
   height: 500px;
 }
